@@ -1,0 +1,53 @@
+3.2
+
+Number -> isEven -> if (number - 2) >
+
+5  -> isEven -> 5- 2 = 3
+	check if argument is > 1 -> return false
+	check if argument is = 0 -> return true
+3 -> isEven -> 3 - 2 = 1
+	check if argument is > 1 -> return false
+	check if argument is = 0 -> return true
+
+6 -> isEven -> 6 -2 = 4
+	check if argument is > 1 -> return false
+	check if argument is = 0 -> return true
+4 -> isEven -> 4 - 2 = 2
+        check if argument is > 1 -> return false
+	check if argument is = 0 -> return true
+2 -> isEven -> 2 - 2 = 0
+	check if argument is > 1 -> return false
+	check if argument is = 0 -> return true
+
+MY ANSWER:
+
+function isEven(num) {
+ if (num < 0) { return isEven(num + 2); }
+  else if (num === 0) { return true; }
+  else if (num === 1) { return false; }
+  else { return isEven(num - 2) ; }
+}
+
+console.log(isEven(50));
+// → true
+console.log(isEven(75));
+// → false
+console.log(isEven(-1));
+// → ??
+
+
+ANSWER: 
+
+function isEven(n) {
+  if (n == 0) return true;
+  else if (n == 1) return false;
+  else if (n < 0) return isEven(-n);
+  else return isEven(n - 2);
+}
+
+console.log(isEven(50));
+// → true
+console.log(isEven(75));
+// → false
+console.log(isEven(-1));
+// → false
