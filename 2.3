@@ -1,0 +1,62 @@
+2.3
+
+
+a a a a a a a a /n
+b b b b b b b b /n
+a a a a a a a a /n
+b b b b b b b b /n
+a a a a a a a a /n
+b b b b b b b b /n
+a a a a a a a a /n
+b b b b b b b b /n
+
+
+let size = 8;
+let rows = size;
+let string = "";
+let a = " #";
+let b = "# ";
+
+while (rows > 0) {
+  
+  if (rows % 2 == 0) {
+    for (let i = 1; i <= size; i++) {
+  string += a;
+}
+string += "\n";
+rows--;
+    
+  } else {
+    
+    for (let i = 1; i <= size; i++) {
+  string += b;
+}
+  
+string += "\n";
+rows--;  
+}
+}
+
+console.log(string);
+
+
+
+ANSWER: 
+
+
+let size = 8;
+
+let board = "";
+
+for (let y = 0; y < size; y++) {
+  for (let x = 0; x < size; x++) {
+    if ((x + y) % 2 == 0) {
+      board += " ";
+    } else {
+      board += "#";
+    }
+  }
+  board += "\n";
+}
+
+console.log(board);
