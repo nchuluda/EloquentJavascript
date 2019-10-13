@@ -1,0 +1,34 @@
+3.3
+
+let count = 0;
+let position = 0;
+
+string -> if string[0] = B -> count++ 
+	
+           -> if string[1] = B -> count++
+            -> if string[string.length - 1] = B -> count++
+
+while (x.length 
+
+I had tried using a while loop instead of a for loop to cycle through each position. Whoops. This way is better: 
+
+ANSWER: 
+
+function countChar(string, ch) {
+  let counted = 0;
+  for (let i = 0; i < string.length; i++) {
+    if (string[i] == ch) {
+      counted += 1;
+    }
+  }
+  return counted;
+}
+
+function countBs(string) {
+  return countChar(string, "B");
+}
+
+console.log(countBs("BBC"));
+// → 2
+console.log(countChar("kakkerlak", "k"));
+// → 4
