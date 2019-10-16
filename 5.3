@@ -1,0 +1,18 @@
+USING LOOP:
+
+function every(array, test) {
+  for (let element of array) {
+ 	if (test(element) == false) {
+      return false;
+    }
+  }
+  return true;
+}
+
+
+USING array.some():
+
+
+function every2(array, test2) {
+  return !array.some(element => !test2(element));
+}
